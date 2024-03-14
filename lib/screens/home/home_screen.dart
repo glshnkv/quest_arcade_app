@@ -79,7 +79,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   GameCategoryCard(
                       image: 'assets/images/home/find-the-number.png',
                       name: 'Find the number',
-                      onTap: () {}),
+                      onTap: () {
+                        context.router.push(FindNumbersLevelsRoute());
+                      }),
                 ],
               ),
               SizedBox(height: 20),
@@ -89,7 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   GameCategoryCard(
                       image: 'assets/images/home/merge-cards.png',
                       name: 'Merge cards',
-                      onTap: () {}),
+                      onTap: () {
+                        context.router.push(MergeCardsRoute());
+                      }),
                   GameCategoryCard(
                       image: 'assets/images/home/checkers.png',
                       name: 'Checkers',

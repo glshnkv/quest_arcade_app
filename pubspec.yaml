@@ -45,6 +45,9 @@ flutter:
      - assets/images/home/
      - assets/images/elements/
      - assets/images/checkers/
+     - assets/images/find-numbers/
+     - assets/images/find-numbers/levels/
+     - assets/images/merge-cards/
 
   fonts:
     - family: Jost

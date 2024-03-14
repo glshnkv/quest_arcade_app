@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:quest_arcade_app/router/router.dart';
-import 'package:quest_arcade_app/screens/games/merge_nubmers/square_colors.dart';
+import 'package:quest_arcade_app/screens/games/merge_numbers/square_colors.dart';
 import 'package:quest_arcade_app/theme/colors.dart';
 import 'tile.dart';
 import 'grid.dart';

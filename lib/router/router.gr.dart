@@ -31,10 +31,52 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    FindNumbersLevelsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const FindNumbersLevelsScreen(),
+      );
+    },
+    FindNumbersRoute.name: (routeData) {
+      final args = routeData.argsAs<FindNumbersRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: FindNumbersScreen(
+          key: args.key,
+          level: args.level,
+        ),
+      );
+    },
+    FindNumbersWinRoute.name: (routeData) {
+      final args = routeData.argsAs<FindNumbersWinRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: FindNumbersWinScreen(
+          key: args.key,
+          coins: args.coins,
+        ),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
+      );
+    },
+    MergeCardsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MergeCardsScreen(),
+      );
+    },
+    MergeCardsWinRoute.name: (routeData) {
+      final args = routeData.argsAs<MergeCardsWinRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: MergeCardsWinScreen(
+          key: args.key,
+          coins: args.coins,
+        ),
       );
     },
     MergeNumbersRoute.name: (routeData) {
@@ -115,6 +157,96 @@ class CheckersWinRouteArgs {
 }
 
 /// generated route for
+/// [FindNumbersLevelsScreen]
+class FindNumbersLevelsRoute extends PageRouteInfo<void> {
+  const FindNumbersLevelsRoute({List<PageRouteInfo>? children})
+      : super(
+          FindNumbersLevelsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'FindNumbersLevelsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [FindNumbersScreen]
+class FindNumbersRoute extends PageRouteInfo<FindNumbersRouteArgs> {
+  FindNumbersRoute({
+    Key? key,
+    required LevelModel level,
+    List<PageRouteInfo>? children,
+  }) : super(
+          FindNumbersRoute.name,
+          args: FindNumbersRouteArgs(
+            key: key,
+            level: level,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'FindNumbersRoute';
+
+  static const PageInfo<FindNumbersRouteArgs> page =
+      PageInfo<FindNumbersRouteArgs>(name);
+}
+
+class FindNumbersRouteArgs {
+  const FindNumbersRouteArgs({
+    this.key,
+    required this.level,
+  });
+
+  final Key? key;
+
+  final LevelModel level;
+
+  @override
+  String toString() {
+    return 'FindNumbersRouteArgs{key: $key, level: $level}';
+  }
+}
+
+/// generated route for
+/// [FindNumbersWinScreen]
+class FindNumbersWinRoute extends PageRouteInfo<FindNumbersWinRouteArgs> {
+  FindNumbersWinRoute({
+    Key? key,
+    required int coins,
+    List<PageRouteInfo>? children,
+  }) : super(
+          FindNumbersWinRoute.name,
+          args: FindNumbersWinRouteArgs(
+            key: key,
+            coins: coins,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'FindNumbersWinRoute';
+
+  static const PageInfo<FindNumbersWinRouteArgs> page =
+      PageInfo<FindNumbersWinRouteArgs>(name);
+}
+
+class FindNumbersWinRouteArgs {
+  const FindNumbersWinRouteArgs({
+    this.key,
+    required this.coins,
+  });
+
+  final Key? key;
+
+  final int coins;
+
+  @override
+  String toString() {
+    return 'FindNumbersWinRouteArgs{key: $key, coins: $coins}';
+  }
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -126,6 +258,58 @@ class HomeRoute extends PageRouteInfo<void> {
   static const String name = 'HomeRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [MergeCardsScreen]
+class MergeCardsRoute extends PageRouteInfo<void> {
+  const MergeCardsRoute({List<PageRouteInfo>? children})
+      : super(
+          MergeCardsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MergeCardsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [MergeCardsWinScreen]
+class MergeCardsWinRoute extends PageRouteInfo<MergeCardsWinRouteArgs> {
+  MergeCardsWinRoute({
+    Key? key,
+    required int coins,
+    List<PageRouteInfo>? children,
+  }) : super(
+          MergeCardsWinRoute.name,
+          args: MergeCardsWinRouteArgs(
+            key: key,
+            coins: coins,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'MergeCardsWinRoute';
+
+  static const PageInfo<MergeCardsWinRouteArgs> page =
+      PageInfo<MergeCardsWinRouteArgs>(name);
+}
+
+class MergeCardsWinRouteArgs {
+  const MergeCardsWinRouteArgs({
+    this.key,
+    required this.coins,
+  });
+
+  final Key? key;
+
+  final int coins;
+
+  @override
+  String toString() {
+    return 'MergeCardsWinRouteArgs{key: $key, coins: $coins}';
+  }
 }
 
 /// generated route for
