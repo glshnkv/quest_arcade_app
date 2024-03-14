@@ -9,6 +9,11 @@ abstract class AppColors {
   static final white15 = Color(0x26FFFFFF);
   static final white10 = Color(0x1AFFFFFF);
 
+  static final whiteSquare = Color(0xFF685D6D);
+  static final blackSquare = Color(0xFF53455E);
+
+  static final orange = Color(0xFFFF9900);
+
   static const blueGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,

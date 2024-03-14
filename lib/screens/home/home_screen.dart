@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quest_arcade_app/router/router.dart';
 import 'package:quest_arcade_app/screens/home/widgets/game_category_card.dart';
 import 'package:quest_arcade_app/theme/colors.dart';
 import 'package:quest_arcade_app/widgets/coins/coins_widgets.dart';
@@ -72,7 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   GameCategoryCard(
                       image: 'assets/images/home/merge-numbers.png',
                       name: 'Merge numbers',
-                      onTap: () {}),
+                      onTap: () {
+                        context.router.push(MergeNumbersRoute());
+                      }),
                   GameCategoryCard(
                       image: 'assets/images/home/find-the-number.png',
                       name: 'Find the number',
@@ -90,7 +93,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   GameCategoryCard(
                       image: 'assets/images/home/checkers.png',
                       name: 'Checkers',
-                      onTap: () {}),
+                      onTap: () {
+                        context.router.push(CheckersRoute());
+                      }),
                 ],
               ),
             ],
