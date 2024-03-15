@@ -110,6 +110,7 @@ class _DailyRewardWidgetState extends State<DailyRewardWidget> {
                               ),
                             ),
                             CountdownTimer(
+                              endWidget: const Center(child: Text('00:00:00')),
                               textStyle: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
